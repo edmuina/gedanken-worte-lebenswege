@@ -13,7 +13,7 @@
     }
 
     header {
-      background: linear-gradient(to right, #8b0000, #e6c6c6, #8b0000);
+      background: linear-gradient(to right, #8b0000, #c66, #8b0000);
       padding: 2rem;
       color: white;
       text-align: center;
@@ -25,7 +25,7 @@
     }
 
     nav {
-      background: linear-gradient(to right, #8b0000, #e6c6c6, #8b0000);
+      background: linear-gradient(to right, #8b0000, #c66, #8b0000);
       display: flex;
       justify-content: center;
       gap: 2rem;
@@ -61,12 +61,16 @@
     nav li ul {
       display: none;
       position: absolute;
-      top: 2rem;
+      top: 2.5rem;
       left: 0;
       background-color: #8b0000;
       padding: 0.5rem;
       border-radius: 0.5rem;
       z-index: 1001;
+    }
+
+    nav li:hover ul {
+      display: block;
     }
 
     nav li ul li {
@@ -76,19 +80,20 @@
     nav li ul li a {
       color: white;
       text-decoration: none;
+      display: block;
     }
 
     .content {
       max-width: 800px;
       margin: 2rem auto;
       padding: 2rem;
-      background: #f5dcdc;
+      background: #e6c6c6;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       border-radius: 1rem;
     }
 
     footer {
-      background: linear-gradient(to right, #8b0000, #e6c6c6, #8b0000);
+      background: linear-gradient(to right, #8b0000, #c66, #8b0000);
       color: white;
       text-align: center;
       padding: 1rem;
@@ -142,7 +147,7 @@
       <li>
         <a href="#">Rechtliches</a>
         <ul>
-          <li><a href="rechtliches.html">Impressum & Datenschutz</a></li>
+          <li><a href="rechtliches.html">Impressum / Datenschutz</a></li>
         </ul>
       </li>
     </ul>
@@ -163,7 +168,6 @@
 
   <footer>
     <p>&copy; 2025 Thomas Keller – Freier Redner</p>
-    <p><a href="rechtliches.html">Rechtliches</a></p>
-  </footer>
+    </footer>
 </body>
 </html>
