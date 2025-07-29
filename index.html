@@ -13,7 +13,7 @@
     }
 
     header {
-      background: linear-gradient(to right, #8b0000, #f0dada, #8b0000);
+      background: linear-gradient(to right, #8b0000, #e6c6c6, #8b0000);
       padding: 2rem;
       color: white;
       text-align: center;
@@ -25,13 +25,14 @@
     }
 
     nav {
-      background: linear-gradient(to right, #8b0000, #f0dada, #8b0000);
+      background: linear-gradient(to right, #8b0000, #e6c6c6, #8b0000);
       display: flex;
       justify-content: center;
       gap: 2rem;
       padding: 1rem;
       position: sticky;
       top: 0;
+      z-index: 1000;
     }
 
     nav ul {
@@ -46,10 +47,11 @@
       position: relative;
     }
 
-    nav a {
+    nav > ul > li > a {
       text-decoration: none;
       color: white;
       font-weight: bold;
+      cursor: pointer;
     }
 
     nav li:hover > ul {
@@ -60,9 +62,11 @@
       display: none;
       position: absolute;
       top: 2rem;
+      left: 0;
       background-color: #8b0000;
       padding: 0.5rem;
       border-radius: 0.5rem;
+      z-index: 1001;
     }
 
     nav li ul li {
@@ -71,19 +75,20 @@
 
     nav li ul li a {
       color: white;
+      text-decoration: none;
     }
 
     .content {
       max-width: 800px;
       margin: 2rem auto;
       padding: 2rem;
-      background: #fff5f5;
+      background: #fff0f0;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       border-radius: 1rem;
     }
 
     footer {
-      background: linear-gradient(to right, #8b0000, #f0dada, #8b0000);
+      background: linear-gradient(to right, #8b0000, #e6c6c6, #8b0000);
       color: white;
       text-align: center;
       padding: 1rem;
