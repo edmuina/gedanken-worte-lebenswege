@@ -2,106 +2,9 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gedanken – Worte – Lebenswege</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fdf9f7;
-      color: #222;
-    }
-    header {
-      background: linear-gradient(to right, #8b0000, #c66, #8b0000);
-      padding: 2rem;
-      color: white;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    nav {
-      background: linear-gradient(to right, #8b0000, #c66, #8b0000);
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 2rem;
-    }
-    nav li {
-      position: relative;
-    }
-    nav > ul > li > a {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    nav li:hover > ul, nav li:focus-within > ul {
-      display: block;
-    }
-    nav li ul {
-      display: none;
-      position: absolute;
-      top: 2.5rem;
-      left: 0;
-      background-color: #8b0000;
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-      z-index: 1001;
-      min-width: 150px;
-    }
-    nav li ul li {
-      padding: 0.3rem 1rem;
-    }
-    nav li ul li a {
-      color: white;
-      text-decoration: none;
-      display: block;
-    }
-    nav li ul li a:hover, nav li ul li a:focus {
-      background-color: #c66;
-    }
-    .content {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: #e6c6c6;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 1rem;
-      color: #3a0a0a;
-    }
-    footer {
-      background: linear-gradient(to right, #8b0000, #c66, #8b0000);
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
-    }
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      nav ul {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      nav li ul {
-        position: static;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -111,16 +14,14 @@
   <nav>
     <ul>
       <li><a href="index.html">Start</a></li>
-      <li>
-        <a href="#" tabindex="0">Angebot</a>
+      <li><a href="#">Angebot</a>
         <ul>
-          <li><a href="trau­erfeiern.htm">Trauerfeiern</a></li>
-          <li><a href="hochzeitenund.htm">Hochzeiten</a></li>
-          <li><a href="willkommensfeiern.htm">Namensfeiern</a></li>
+          <li><a href="trauerfeiern.html">Trauerfeiern</a></li>
+          <li><a href="hochzeiten.html">Hochzeiten</a></li>
+          <li><a href="willkommensfeiern.html">Namensfeiern</a></li>
         </ul>
       </li>
-      <li>
-        <a href="#" tabindex="0">Über mich</a>
+      <li><a href="#">Über mich</a>
         <ul>
           <li><a href="gedanken.html">Gedanken</a></li>
           <li><a href="worte.html">Worte</a></li>
@@ -128,28 +29,14 @@
         </ul>
       </li>
       <li><a href="kontakt.html">Kontakt</a></li>
-      <li>
-        <a href="#" tabindex="0">Rechtliches</a>
-        <ul>
-          <li><a href="rechtliches.html">Impressum und Datenschutz</a></li>
-        </ul>
-      </li>
+      <li><a href="rechtliches.html">Rechtliches</a></li>
     </ul>
   </nav>
-
-  <main class="content">
+  <div class="content">
     <h2>Willkommen auf meiner Seite</h2>
     <p>Es gibt Momente im Leben, die Worte brauchen – ehrliche, stille, starke oder tröstende.</p>
-    <p>Als freier Redner begleite ich Menschen in besonderen Situationen:</p>
-    <ul>
-      <li>Beim Abschied</li>
-      <li>Im Beginn einer Liebe</li>
-      <li>Beim Feiern eines neuen Lebens</li>
-    </ul>
-    <p>Mein Angebot ist klar, würdevoll und individuell.</p>
-    <p>Ob weltlich, christlich oder frei gestaltet – wir finden gemeinsam den passenden Rahmen.</p>
-  </main>
-
+    <p>Als freier Redner begleite ich Menschen in besonderen Situationen: beim Abschied, im Beginn einer Liebe oder beim Feiern eines neuen Lebens.</p>
+  </div>
   <footer>
     <p>&copy; 2025 Thomas Keller – Freier Redner</p>
   </footer>

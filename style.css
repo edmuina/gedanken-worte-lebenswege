@@ -1,66 +1,72 @@
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom right, #f9f6f2, #ffe5e5);
-    color: #222;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fdf9f7;
+  color: #222;
 }
 
 header {
-    background-color: #8b0000;
-    color: white;
-    padding: 1em;
-    text-align: center;
+  background: linear-gradient(to right, #8b0000, #c66, #8b0000);
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+
+nav {
+  background: linear-gradient(to right, #8b0000, #c66, #8b0000);
+  padding: 1rem;
+  text-align: center;
 }
 
 nav ul {
-    list-style: none;
-    background: #a00;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
-    position: relative;
+nav > ul > li {
+  display: inline-block;
+  position: relative;
+  margin: 0 1rem;
 }
 
 nav a {
-    display: block;
-    padding: 1em;
-    color: white;
-    text-decoration: none;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
-nav ul .submenu {
-    display: none;
-    position: absolute;
-    background: #c00;
-    top: 100%;
-    left: 0;
-    min-width: 200px;
-    z-index: 999;
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #8b0000;
+  padding: 0.5rem;
+  top: 100%;
+  left: 0;
 }
 
-nav ul li:hover .submenu {
-    display: block;
+nav ul li:hover ul {
+  display: block;
 }
 
-.submenu li a:hover {
-    background-color: #e60000;
+nav ul li ul li {
+  display: block;
+  margin: 0;
 }
 
-main {
-    padding: 2em;
+.content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #e6c6c6;
+  border-radius: 1rem;
 }
 
 footer {
-    background-color: #8b0000;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    position: relative;
+  background: linear-gradient(to right, #8b0000, #c66, #8b0000);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
 }
