@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gedanken – Worte – Lebenswege</title>
   <style>
     body {
@@ -28,7 +28,6 @@
       background: linear-gradient(to right, #8b0000, #c66, #8b0000);
       display: flex;
       justify-content: center;
-      gap: 2rem;
       padding: 1rem;
       position: sticky;
       top: 0;
@@ -47,18 +46,18 @@
       position: relative;
     }
 
-    nav > ul > li > a {
+    nav > ul > li > a,
+    nav > ul > li > .menu-toggle {
       text-decoration: none;
       color: white;
       font-weight: bold;
       cursor: pointer;
+      user-select: none;
+      padding: 0.25rem 0.5rem;
+      display: inline-block;
     }
 
-    nav li:hover > ul {
-      display: block;
-    }
-
-    nav li ul {
+    nav li .submenu {
       display: none;
       position: absolute;
       top: 2.5rem;
@@ -67,20 +66,30 @@
       padding: 0.5rem;
       border-radius: 0.5rem;
       z-index: 1001;
+      min-width: 150px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     }
 
-    nav li:hover ul {
-      display: block;
-    }
-
-    nav li ul li {
+    nav li .submenu li {
       padding: 0.3rem 1rem;
     }
 
-    nav li ul li a {
+    nav li .submenu li a {
       color: white;
       text-decoration: none;
       display: block;
+    }
+
+    nav li.open > .submenu {
+      display: block;
+    }
+
+    /* Optional: Hover Effekt für Menüpunkte */
+    nav > ul > li > a:hover,
+    nav > ul > li > .menu-toggle:hover,
+    nav li .submenu li a:hover {
+      background-color: #b33;
+      border-radius: 0.3rem;
     }
 
     .content {
@@ -98,11 +107,6 @@
       text-align: center;
       padding: 1rem;
       margin-top: 3rem;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: underline;
     }
 
     @media (max-width: 600px) {
@@ -127,27 +131,27 @@
   <nav>
     <ul>
       <li><a href="index.html">Start</a></li>
-      <li>
-        <a href="#">Angebot</a>
-        <ul>
+      <li class="has-submenu">
+        <a href="#" class="menu-toggle">Angebot</a>
+        <ul class="submenu">
           <li><a href="trauern.html">Trauerfeiern</a></li>
           <li><a href="heiraten.html">Hochzeiten</a></li>
           <li><a href="namensfest.html">Namensfeiern</a></li>
         </ul>
       </li>
-      <li>
-        <a href="#">Über mich</a>
-        <ul>
+      <li class="has-submenu">
+        <a href="#" class="menu-toggle">Über mich</a>
+        <ul class="submenu">
           <li><a href="gedanken.html">Gedanken</a></li>
           <li><a href="worte.html">Worte</a></li>
           <li><a href="lebenswege.html">Lebenswege</a></li>
         </ul>
       </li>
       <li><a href="kontakt.html">Kontakt</a></li>
-      <li>
-        <a href="#">Rechtliches</a>
-        <ul>
-          <li><a href="rechtliches.html">Impressum / Datenschutz</a></li>
+      <li class="has-submenu">
+        <a href="#" class="menu-toggle">Rechtliches</a>
+        <ul class="submenu">
+          <li><a href="rechtliches.html">Impressum Datenschutz</a></li>
         </ul>
       </li>
     </ul>
@@ -168,6 +172,34 @@
 
   <footer>
     <p>&copy; 2025 Thomas Keller – Freier Redner</p>
-    </footer>
+  </footer>
+
+  <script>
+    document.querySelectorAll('nav .menu-toggle').forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        const parentLi = this.parentElement;
+
+        // Andere Menüs schließen
+        document.querySelectorAll('nav li.has-submenu.open').forEach(openLi => {
+          if (openLi !== parentLi) {
+            openLi.classList.remove('open');
+          }
+        });
+
+        // Aktuelles Menü öffnen/schließen
+        parentLi.classList.toggle('open');
+      });
+    });
+
+    // Klick außerhalb schließt Menüs
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('nav')) {
+        document.querySelectorAll('nav li.has-submenu.open').forEach(openLi => {
+          openLi.classList.remove('open');
+        });
+      }
+    });
+  </script>
 </body>
 </html>
