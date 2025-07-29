@@ -2,117 +2,70 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gedanken – Worte – Lebenswege</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom right, #fff8f8, #ffeaea);
-            color: #222;
+            background: linear-gradient(to bottom, #8B0000, #FFCCCC, #8B0000);
+            color: #333;
         }
         header {
-            background: linear-gradient(to right, #8b0000, #ff5555);
+            background: linear-gradient(to right, #8B0000, #FF6666, #8B0000);
             color: white;
-            padding: 1rem;
+            padding: 1em;
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background: linear-gradient(to right, #8b0000, #ff5555);
+        nav {
+            background: linear-gradient(to right, #8B0000, #FF6666, #8B0000);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
-        nav li {
-            float: left;
-        }
-        nav li a, .dropdown-btn {
-            display: inline-block;
+        nav a {
             color: white;
-            text-align: center;
-            padding: 14px 16px;
             text-decoration: none;
-        }
-        nav li:hover .dropdown-content {
+            padding: 1em;
             display: block;
         }
-        .dropdown {
-            position: relative;
-            display: inline-block;
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #ffeaea;
-            min-width: 160px;
-            z-index: 1;
-        }
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        .dropdown-content a:hover {
-            background-color: #f0cfcf;
-        }
-        .content {
-            padding: 2rem;
+        main {
+            padding: 2em;
+            max-width: 1000px;
+            margin: auto;
         }
         footer {
-            background: #eee;
+            background: linear-gradient(to right, #8B0000, #FF6666, #8B0000);
+            color: white;
             text-align: center;
-            padding: 1rem;
-            font-size: 0.8rem;
-            color: #666;
+            padding: 1em;
+            position: relative;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Gedanken – Worte – Lebenswege</h1>
-        <p>Thomas Keller – Freier Redner</p>
+        <p>Thomas Keller – freier Redner</p>
     </header>
     <nav>
-        <ul>
-            <li class="dropdown">
-                <a href="#">Angebot</a>
-                <div class="dropdown-content">
-                    <a href="willkommensfeier.html">Willkommensfeier</a>
-                    <a href="hochzeiten.html">Hochzeiten</a>
-                    <a href="trauerdienst.html">Trauerbegleitung</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="#">Über mich</a>
-                <div class="dropdown-content">
-                    <a href="gedanken.html">Gedanken</a>
-                    <a href="worte.html">Worte</a>
-                    <a href="lebenswege.html">Lebenswege</a>
-                </div>
-            </li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-            <li class="dropdown">
-                <a href="#">Rechtliches</a>
-                <div class="dropdown-content">
-                    <a href="impressum.html">Impressum</a>
-                    <a href="datenschutz.html">Datenschutz</a>
-                </div>
-            </li>
-        </ul>
+        <a href="index.html">Start</a>
+        <a href="angebot.html">Angebot</a>
+        <a href="ueber_mich.html">Über mich</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="rechtliches.html">Rechtliches</a>
     </nav>
-    <div class="content">
+    <main>
         <h2>Willkommen</h2>
-        <p>Schön, dass Sie hier sind. Ich begleite Menschen auf ihrem Weg – mit Worten, die tragen. Ob Hochzeit, Abschied oder Willkommensfeier: Gemeinsam gestalten wir einen Moment, der berührt.</p>
-    </div>
+        <p>Willkommen auf meiner Seite. Ich begleite Menschen durch Lebensübergänge – ob Abschied, Neubeginn oder besondere Feste.</p>
+        <p>Hier findest du Informationen zu meinem Angebot, meiner Arbeitsweise und wie du mich erreichen kannst.</p>
+    </main>
     <footer>
-        Edmühle 1, 84419 Schwindegg – Tel: 08082 / 7398 – Mail: kontakt@gedanken-worte-lebenswege.de
+        &copy; 2025 Thomas Keller – Gedanken – Worte – Lebenswege
     </footer>
 </body>
 </html>
-    
