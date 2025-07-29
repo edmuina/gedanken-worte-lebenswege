@@ -1,55 +1,99 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gedanken – Worte – Lebenswege</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gedanken – Worte – Lebenswege</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff5f5;
+      color: #222;
+    }
+
+    header {
+      background-color: #8B0000;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #eee;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      margin: 0.5rem 1rem;
+      text-decoration: none;
+      color: #8B0000;
+      font-weight: bold;
+    }
+
+    main {
+      background-color: #ffecec;
+      padding: 2rem;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Gedanken – Worte – Lebenswege</h1>
-        <h2>Thomas Keller – freier Redner</h2>
-        <nav>
-            <a href="#angebote">Angebote</a>
-            <a href="#besonderheiten">Besonderheiten</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
-    </header>
+  <header>
+    <h1>Gedanken – Worte – Lebenswege</h1>
+    <h2>Thomas Keller · Freier Redner</h2>
+  </header>
 
-    <main>
-        <section id="intro">
-            <h3>Willkommen</h3>
-            <p>Ich begleite Menschen auf ihren Wegen – würdevoll, ehrlich und individuell. Ob Trauerfeier, Willkommensfest oder Hochzeit: Im Mittelpunkt steht der Mensch.</p>
-        </section>
+  <nav>
+    <a href="#angebot">Angebot</a>
+    <a href="#ueber">Über mich</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
 
-        <section id="angebote">
-            <h3>Angebote</h3>
-            <ul>
-                <li>Trauerfeiern – religiös, frei oder individuell</li>
-                <li>Willkommensfeiern & Namensfeste</li>
-                <li>Hochzeitszeremonien</li>
-            </ul>
-        </section>
+  <main>
+    <section id="angebot">
+      <h3>Angebot</h3>
+      <ul>
+        <li>Trauerfeiern</li>
+        <li>Hochzeiten</li>
+        <li>Willkommensfeiern</li>
+      </ul>
+    </section>
 
-        <section id="besonderheiten">
-            <h3>Was mich auszeichnet</h3>
-            <p>Kein Schema F, sondern echte Gestaltungsspielräume. Auf Wunsch: persönliches Ritual wie z. B. ein Erinnerungsbaum auf meinem Hof.</p>
-        </section>
+    <section id="ueber">
+      <h3>Über mich</h3>
+      <p>Gedanken · Worte · Lebenswege</p>
+      <p>Hier stelle ich mich und meine Haltung zum Leben und Feiern vor. (Platzhaltertext)</p>
+    </section>
 
-        <section id="kontakt">
-            <h3>Kontakt</h3>
-            <p>Thomas Keller<br>
-            Musterstraße 1<br>
-            12345 Musterdorf<br>
-            Telefon: 01234 / 56789<br>
-            E-Mail: <a href="mailto:kontakt@gedanken-worte-lebenswege.de">kontakt@gedanken-worte-lebenswege.de</a></p>
-        </section>
-    </main>
+    <section id="kontakt">
+      <h3>Kontakt</h3>
+      <p>Thomas Keller</p>
+      <p>Edmühle 1<br>84419 Schwindegg</p>
+      <p>Telefon: 08082 / 7398</p>
+      <p>E-Mail: <a href="mailto:kontakt@gedanken-worte-lebenswege.de">kontakt@gedanken-worte-lebenswege.de</a></p>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 Thomas Keller – Gedanken – Worte – Lebenswege</p>
-        <p><a href="/texte/impressum.html">Impressum</a> | <a href="/texte/datenschutz.html">Datenschutz</a></p>
-    </footer>
+  <footer>
+    &copy; 2025 Thomas Keller – Gedanken · Worte · Lebenswege
+  </footer>
 </body>
 </html>
