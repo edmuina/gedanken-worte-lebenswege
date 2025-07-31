@@ -29,8 +29,29 @@ nav {
   z-index: 1000;
 }
 
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
 nav li {
   position: relative; /* Wichtig für korrektes Positionieren der Untermenüs */
+}
+
+nav li > a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+nav li:hover > a,
+nav li:focus-within > a {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.3rem;
 }
 
 nav li ul {
@@ -39,14 +60,34 @@ nav li ul {
   top: 100%;    /* Untermenü direkt unter dem Hauptmenüpunkt, ohne Lücke */
   left: 0;
   background-color: #8b0000; /* Passend zu deinem Design */
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   border-radius: 0.5rem;
   z-index: 1001;
   min-width: 10rem; /* Optional, für gleichmäßige Breite */
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-nav li:hover > ul {
+nav li:hover > ul,
+nav li:focus-within > ul {
+  display: flex;
+}
+
+nav li ul li {
+  width: 100%;
+}
+
+nav li ul li a {
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
   display: block;
+}
+
+nav li ul li a:hover,
+nav li ul li a:focus {
+  background-color: #a00000;
+  border-radius: 0.3rem;
 }
 
 .content {
@@ -81,5 +122,20 @@ footer a {
   nav ul {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  nav li ul {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: transparent;
+    display: none;
+    padding-left: 1rem;
+  }
+
+  nav li:focus-within > ul,
+  nav li:hover > ul {
+    display: flex;
+    flex-direction: column;
   }
 }
