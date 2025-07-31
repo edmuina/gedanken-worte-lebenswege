@@ -39,11 +39,12 @@ nav li {
 }
 
 nav li > a {
-  color: white;
+  color: white; /* Wichtig: weiße Schrift */
   text-decoration: none;
   padding: 0.5rem 1rem;
   display: block;
   white-space: nowrap;
+  transition: background-color 0.3s ease;
 }
 
 nav li:hover > a,
@@ -57,7 +58,7 @@ nav li ul {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #8b0000;
+  background-color: #a72d2d; /* etwas helleres dunkles rot für bessere Lesbarkeit */
   padding: 0.5rem 0;
   border-radius: 0.5rem;
   z-index: 1001;
@@ -76,19 +77,21 @@ nav li ul li {
 }
 
 nav li ul li a {
-  color: white;
+  color: white; /* Weißer Text im Untermenü */
   padding: 0.5rem 1rem;
   text-decoration: none;
   display: block;
   white-space: nowrap;
+  transition: background-color 0.3s ease;
 }
 
 nav li ul li a:hover,
 nav li ul li a:focus {
-  background-color: #a00000;
+  background-color: #c44c4c; /* helleres Rot beim Hover */
   border-radius: 0.3rem;
 }
 
+/* Content und Footer unverändert */
 .content {
   max-width: 800px;
   margin: 2rem auto;
@@ -112,7 +115,7 @@ footer a {
   text-decoration: underline;
 }
 
-/* Mobile */
+/* Mobile Ansicht */
 @media (max-width: 600px) {
   nav > ul {
     flex-direction: column;
@@ -121,10 +124,10 @@ footer a {
   }
 
   nav li ul {
-    position: static;
+    position: static; /* Kein Overlay mehr */
     box-shadow: none;
     border-radius: 0;
-    background-color: transparent;
+    background-color: transparent; /* transparent für mobile */
     display: none;
     padding-left: 1rem;
   }
@@ -133,5 +136,11 @@ footer a {
   nav li:hover > ul {
     display: flex;
     flex-direction: column;
+  }
+
+  /* Mobile: Links weiterhin weiß und gut sichtbar */
+  nav li > a,
+  nav li ul li a {
+    color: white;
   }
 }
