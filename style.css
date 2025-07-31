@@ -2,23 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f0f6f0;
-  color: #222;
-}
-
-header {
-  background: linear-gradient(to right, #2a6f2a, #60a060, #2a6f2a);
-  padding: 2rem;
-  color: white;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-nav {
+  ba
   background: linear-gradient(to right, #2a6f2a, #60a060, #2a6f2a);
   position: sticky;
   top: 0;
