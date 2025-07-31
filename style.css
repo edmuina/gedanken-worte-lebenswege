@@ -39,12 +39,11 @@ nav li {
 }
 
 nav li > a {
-  color: white; /* Wichtig: weiße Schrift */
+  color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
   display: block;
   white-space: nowrap;
-  transition: background-color 0.3s ease;
 }
 
 nav li:hover > a,
@@ -53,12 +52,13 @@ nav li:focus-within > a {
   border-radius: 0.3rem;
 }
 
+/* Dropdown-Menü */
 nav li ul {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background: linear-gradient(to right, #2a6f2a, #60a060, #2a6f2a);
+  background: linear-gradient(to right, #2a6f2a, #60a060, #2a6f2a); /* Jetzt grün wie Header */
   padding: 0.5rem 0;
   border-radius: 0.5rem;
   z-index: 1001;
@@ -77,21 +77,20 @@ nav li ul li {
 }
 
 nav li ul li a {
-  color: white; /* Weißer Text im Untermenü */
+  color: white;
   padding: 0.5rem 1rem;
   text-decoration: none;
   display: block;
   white-space: nowrap;
-  transition: background-color 0.3s ease;
 }
 
 nav li ul li a:hover,
 nav li ul li a:focus {
-  background-color: #c44c4c; /* helleres Rot beim Hover */
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 0.3rem;
 }
 
-/* Content und Footer unverändert */
+/* Hauptinhalt */
 .content {
   max-width: 800px;
   margin: 2rem auto;
@@ -102,6 +101,7 @@ nav li ul li a:focus {
   color: #1c3d1c;
 }
 
+/* Footer */
 footer {
   background: linear-gradient(to right, #2a6f2a, #60a060, #2a6f2a);
   color: white;
@@ -124,23 +124,17 @@ footer a {
   }
 
   nav li ul {
-    position: static; /* Kein Overlay mehr */
+    position: static;
     box-shadow: none;
     border-radius: 0;
-    background-color: transparent; /* transparent für mobile */
+    background: transparent;
     display: none;
     padding-left: 1rem;
   }
 
-  nav li:focus-within > ul,
-  nav li:hover > ul {
+  nav li:hover > ul,
+  nav li:focus-within > ul {
     display: flex;
     flex-direction: column;
-  }
-
-  /* Mobile: Links weiterhin weiß und gut sichtbar */
-  nav li > a,
-  nav li ul li a {
-    color: white;
   }
 }
