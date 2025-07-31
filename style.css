@@ -58,7 +58,7 @@ nav li ul {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #a72d2d; /* etwas helleres dunkles rot für bessere Lesbarkeit */
+  background: linear-gradient(to right, #2a6f2a, #60a060, #2a6f2a);
   padding: 0.5rem 0;
   border-radius: 0.5rem;
   z-index: 1001;
