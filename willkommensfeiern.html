@@ -5,6 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Namensfeiern – Gedanken – Worte – Lebenswege</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    nav > button {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      nav > button {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.2em;
+        margin: 0.5em 0;
+        cursor: pointer;
+      }
+
+      nav > ul {
+        display: none;
+        flex-direction: column;
+        gap: 0.5em;
+      }
+
+      nav > ul.open {
+        display: flex;
+      }
+
+      nav ul ul {
+        display: none;
+      }
+
+      nav ul li:hover > ul {
+        display: block;
+      }
+    }
+  </style>
   <script>
     function toggleMenu() {
       const nav = document.querySelector('nav > ul');
