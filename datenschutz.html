@@ -1,15 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Datenschutz</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutz</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // Mobiles Menü ein-/ausklappen
+    function toggleMenu() {
+      const nav = document.querySelector('nav > ul');
+      nav.classList.toggle('show');
+    }
+  </script>
 </head>
 <body>
-    <header><h1>Datenschutz</h1></header>
-    <main><p>Inhalt für die Seite „datenschutz“ folgt.</p></main>
-    <footer><p>© Thomas Keller</p></footer>
+  <header>
+    <h1>Worte am Weg – Thomas Keller</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <button onclick="toggleMenu()" aria-label="Menü ein-/ausklappen">☰ Menü</button>
+    <ul>
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="trauerfeiern.html">Trauerfeiern</a></li>
+      <li><a href="hochzeiten.html">Hochzeiten</a></li>
+      <li><a href="namensfeiern.html">Namensfeiern</a></li>
+      <li>
+        <a href="#">Über mich</a>
+        <ul>
+          <li><a href="wer.html">Wer ich bin</a></li>
+          <li><a href="wie.html">Wie ich arbeite</a></li>
+          <li><a href="warum.html">Warum ich es tue</a></li>
+          <li><a href="werte.html">Wofür ich stehe</a></li>
+        </ul>
+      </li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="rechtliches.html">Rechtliches</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hauptinhalt -->
+  <main class="content">
+    <p>Inhalt für die Seite „Datenschutz“ folgt.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© Thomas Keller</p>
+  </footer>
 </body>
 </html>
