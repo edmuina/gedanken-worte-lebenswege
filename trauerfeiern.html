@@ -5,13 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Trauerfeiern – Gedanken – Worte – Lebenswege</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav > ul');
+      nav.classList.toggle('open');
+    }
+  </script>
 </head>
 <body>
   <header>
     <h1>Gedanken – Worte – Lebenswege</h1>
     <p>Thomas Keller – Freier Redner</p>
   </header>
+
   <nav>
+    <button onclick="toggleMenu()" aria-label="Menü ein-/ausklappen">☰ Menü</button>
     <ul>
       <li><a href="index.html">Start</a></li>
       <li><a href="#">Angebot</a>
@@ -32,11 +40,13 @@
       <li><a href="rechtliches.html">Rechtliches</a></li>
     </ul>
   </nav>
+
   <div class="content">
     <h2>Trauerfeiern</h2>
     <p>Der Abschied von einem geliebten Menschen ist immer schwer. Als freier Redner begleite ich Sie mit einfühlsamen Worten und individuell gestalteten Ritualen, die den Abschied würdevoll machen.</p>
     <p>Ich gestalte Ihre Trauerfeier persönlich, mit Respekt vor Ihren Wünschen und Traditionen – egal ob christlich, weltlich oder frei.</p>
   </div>
+
   <footer>
     <p>&copy; 2025 Thomas Keller – Freier Redner</p>
   </footer>
