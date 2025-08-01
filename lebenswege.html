@@ -2,17 +2,25 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lebenswege – Gedanken – Worte – Lebenswege</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav > ul');
+      nav.classList.toggle('open');
+    }
+  </script>
 </head>
 <body>
+
   <header>
     <h1>Gedanken – Worte – Lebenswege</h1>
     <p>Thomas Keller – Freier Redner</p>
   </header>
 
   <nav>
+    <button onclick="toggleMenu()" aria-label="Menü ein-/ausklappen">☰ Menü</button>
     <ul>
       <li><a href="index.html">Start</a></li>
       <li><a href="#">Angebot</a>
