@@ -3,10 +3,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-   background: linear-gradient(to bottom, #d9efd9, #a8d8a8);
+  background: linear-gradient(to bottom, #d9efd9, #a8d8a8);
   color: #222;
 }
 
+/* Header */
 header {
   background: linear-gradient(to right, #2a6f2a, #60a060, #2a6f2a);
   padding: 2rem;
@@ -20,6 +21,19 @@ header h1 {
   font-size: 2rem;
 }
 
+/* Menü-Button (nur mobil sichtbar) */
+.menu-toggle {
+  display: none;
+  background-color: #2a6f2a;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: left;
+}
+
+/* Navigation */
 nav {
   background: linear-gradient(to right, #2a6f2a, #60a060, #2a6f2a);
   position: sticky;
@@ -95,11 +109,9 @@ nav li ul li a:focus {
 /* Hauptinhalt */
 .content {
   max-width: 800px;
-  margin: 0 auto; /* kein vertikaler Abstand */
+  margin: 0 auto;
   padding: 2rem;
   background: linear-gradient(to bottom, #d9efd9, #a8d8a8);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
   color: #1c3d1c;
 }
 
@@ -119,10 +131,19 @@ footer a {
 
 /* Mobile Ansicht */
 @media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
   nav > ul {
+    display: none;
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
+  }
+
+  nav > ul.open {
+    display: flex;
   }
 
   nav li ul {
@@ -130,13 +151,6 @@ footer a {
     box-shadow: none;
     border-radius: 0;
     background: transparent;
-    display: none;
     padding-left: 1rem;
-  }
-
-  nav li:hover > ul,
-  nav li:focus-within > ul {
-    display: flex;
-    flex-direction: column;
   }
 }
