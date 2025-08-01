@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gedanken – Worte – Lebenswege</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    @media (min-width: 601px) {
+      .menu-toggle {
+        display: none !important;
+      }
+    }
+  </style>
   <script>
     function toggleMenu() {
       const nav = document.querySelector('nav > ul');
@@ -20,7 +27,7 @@
   </header>
 
   <nav>
-    <button onclick="toggleMenu()" aria-label="Menü ein-/ausklappen">☰ Menü</button>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menü ein-/ausklappen">☰ Menü</button>
     <ul>
       <li><a href="index.html">Startseite</a></li>
       <li>
