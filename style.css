@@ -1,6 +1,7 @@
 /* style.css */
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   background: #f0f6f0;
   color: #222;
@@ -11,6 +12,7 @@ header {
   padding: 2rem;
   color: white;
   text-align: center;
+  margin-bottom: 0;
 }
 
 header h1 {
@@ -58,7 +60,7 @@ nav li ul {
   position: absolute;
   top: 100%;
   left: 0;
-  background: linear-gradient(to right, #2a6f2a, #60a060, #2a6f2a); /* Jetzt grün wie Header */
+  background: linear-gradient(to right, #2a6f2a, #60a060, #2a6f2a);
   padding: 0.5rem 0;
   border-radius: 0.5rem;
   z-index: 1001;
@@ -93,7 +95,7 @@ nav li ul li a:focus {
 /* Hauptinhalt */
 .content {
   max-width: 800px;
-  margin: 2rem auto;
+  margin: 0 auto; /* kein vertikaler Abstand */
   padding: 2rem;
   background: linear-gradient(to bottom, #d9efd9, #a8d8a8);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -107,7 +109,7 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
-  margin-top: 3rem;
+  margin-top: 0;
 }
 
 footer a {
