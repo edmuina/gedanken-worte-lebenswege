@@ -23,3 +23,87 @@
     }
     .intro-image {
       flex: 0 0 auto;
+      max-width: 250px;
+    }
+    .intro-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .four-liner {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .four-liner p {
+      margin: 0.3rem 0;
+      text-align: left;
+      display: inline-block;
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav > ul');
+      nav.classList.toggle('open');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Gedanken – Worte – Lebenswege</h1>
+    <p>Thomas Keller – Freier Redner</p>
+  </header>
+
+  <nav>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menü ein-/ausklappen">☰ Menü</button>
+    <ul>
+      <li><a href="index.html">Start</a></li>
+      <li><a href="#">Angebot</a>
+        <ul>
+          <li><a href="trauerfeiern.html">Trauerfeiern</a></li>
+          <li><a href="hochzeiten.html">Hochzeiten</a></li>
+          <li><a href="willkommensfeiern.html">Namensfeiern</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Über mich</a>
+        <ul>
+          <li><a href="gedanken.html">Gedanken</a></li>
+          <li><a href="worte.html">Worte</a></li>
+          <li><a href="lebenswege.html">Lebenswege</a></li>
+        </ul>
+      </li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="rechtliches.html">Rechtliches</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <div class="intro-section">
+      <div class="intro-text">
+        <div class="four-liner">
+          <p>Sondern Sprache</p>
+          <p>Die trägt.</p>
+          <p>Die würdigt.</p>
+          <p>Die verbindet.</p>
+        </div>
+
+        <p>Es gibt Momente im Leben, da gilt es, Worte zu finden.</p>
+        <p>Echte Worte. Keine Floskeln. Keine leeren Gesten.</p>
+        <p>Meine Aufgabe dabei ist es, Gedanken zu ordnen, Worte zu finden, Lebenswege zu begleiten.</p>
+        <p>Ich begleite Menschen in besonderen Lebenssituationen – beim Abschied, beim Ja-Sagen, beim Willkommen heißen eines neuen Menschen.</p>
+        <p>Mit Erfahrung, Achtsamkeit und einem offenen Ohr.</p>
+        <p>Jede Feier ist einzigartig. So wie die Menschen, um die es geht.</p>
+        <p>Darum entstehen meine Reden im gemeinsamen Gespräch – ehrlich, persönlich, auf das Wesentliche konzentriert.</p>
+        <p>Ob weltlich, christlich oder frei – ich gestalte Rituale, die zu Euch passen.</p>
+        <p>Mit Worten, die bleiben dürfen.</p>
+      </div>
+      <div class="intro-image">
+        <img src="img/Kellertom1.jpg" alt="Portrait Thomas Keller" />
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Thomas Keller – Freier Redner</p>
+  </footer>
+</body>
+</html>
