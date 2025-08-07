@@ -1,4 +1,4 @@
-en<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
@@ -11,6 +11,36 @@ en<!DOCTYPE html>
         display: none !important;
       }
     }
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+    .intro-text {
+      flex: 1;
+      min-width: 250px;
+    }
+    .portrait {
+      flex-shrink: 0;
+      width: 250px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+    .kunst-satz {
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      font-size: 1.2em;
+      line-height: 1.5;
+    }
+    .kunst-satz span {
+      display: block;
+      text-align: left;
+      margin: 0 auto;
+      max-width: 20em;
+    }
   </style>
   <script>
     function toggleMenu() {
@@ -22,6 +52,7 @@ en<!DOCTYPE html>
 <body>
   <header>
     <h1>Gedanken – Worte – Lebenswege</h1>
+    <p>Thomas Keller – Freier Redner</p>
   </header>
 
   <nav>
@@ -48,32 +79,21 @@ en<!DOCTYPE html>
   </nav>
 
   <div class="content">
-    <img src="img/Kellertom1.jpg" alt="Thomas Keller" style="max-width: 200px; float: right; margin: 0 0 1em 1em;" />
-
-    <p>Es gibt Momente im Leben, da gilt es, Worte zu finden.<br>
-    Echte Worte. Keine Floskeln. Keine leeren Gesten.<br>
-    Sondern</p>
-
-    <div style="text-align: center; margin: 2em 0;">
-      <div style="display: inline-block; text-align: left; line-height: 1.6; font-weight: 500;">
-        Sprache<br>
-        Die Trägt<br>
-        Die Würdigt<br>
-        Die Verbindet
-      </div>
+    <div class="kunst-satz">
+      <span>Sondern ordnen</span>
+      <span>Sprache finden</span>
+      <span>Die trägt</span>
+      <span>Die würdigt. Die verbindet.</span>
     </div>
 
-    <p>Ich begleite Menschen in besonderen Lebenssituationen –<br>
-    beim Abschied, beim Ja-Sagen, beim Willkommenheißen eines neuen Menschen.<br>
-    Mit Erfahrung, Achtsamkeit und einem offenen Ohr.</p>
-
-    <p>Jede Feier ist einzigartig. So wie die Menschen, um die es geht.<br>
-    Darum entstehen meine Reden im gemeinsamen Gespräch –<br>
-    ehrlich, persönlich, auf das Wesentliche konzentriert.</p>
-
-    <p>Ob weltlich, christlich oder frei –<br>
-    ich gestalte Rituale, die zu euch passen.<br>
-    Mit Worten, die bleiben dürfen.</p>
+    <div class="intro">
+      <div class="intro-text">
+        <p>Es gibt Momente im Leben, die Worte brauchen – ehrliche, stille, starke oder tröstende.</p>
+        <p>Als freier Redner begleite ich Menschen in besonderen Situationen: beim Abschied, im Beginn einer Liebe oder beim Feiern eines neuen Lebens.</p>
+        <p>Mein Angebot ist klar, würdevoll und individuell – wir finden gemeinsam den passenden Rahmen für Ihren Anlass.</p>
+      </div>
+      <img src="img/Kellertom1.jpg" alt="Portrait von Thomas Keller" class="portrait" />
+    </div>
   </div>
 
   <footer>
