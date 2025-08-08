@@ -12,8 +12,30 @@
         <p>Thomas Keller – Freier Redner</p>
     </header>
 
-    <nav>
-        <!-- Navigation unverändert -->
+    <nav class="navbar">
+        <button class="menu-toggle">&#9776; Menü</button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Startseite</a></li>
+            <li class="dropdown">
+                <a href="#">Angebot</a>
+                <ul class="dropdown-content">
+                    <li><a href="trauerfeiern.html" class="active">Trauerfeiern</a></li>
+                    <li><a href="hochzeiten.html">Hochzeiten</a></li>
+                    <li><a href="namensfeiern.html">Namensfeiern</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Über mich</a>
+                <ul class="dropdown-content">
+                    <li><a href="wer.html">Wer ich bin</a></li>
+                    <li><a href="wie.html">Wie ich arbeite</a></li>
+                    <li><a href="warum.html">Warum ich es tue</a></li>
+                    <li><a href="werte.html">Wofür ich stehe</a></li>
+                </ul>
+            </li>
+            <li><a href="gedanken.html">Gedanken</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
     </nav>
 
     <main>
@@ -33,7 +55,13 @@
     </main>
 
     <footer>
-        <!-- Footer unverändert -->
+        <p>&copy; 2025 Worte am Weg – Thomas Keller | <a href="impressum.html">Impressum</a></p>
     </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
