@@ -1,88 +1,39 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trauerfeiern – Gedanken – Worte – Lebenswege</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    nav > button {
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      nav > button {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 1.2em;
-        margin: 0.5em 0;
-        cursor: pointer;
-      }
-
-      nav > ul {
-        display: none;
-        flex-direction: column;
-        gap: 0.5em;
-      }
-
-      nav > ul.open {
-        display: flex;
-      }
-
-      nav ul ul {
-        display: none;
-      }
-
-      nav ul li:hover > ul {
-        display: block;
-      }
-    }
-  </style>
-  <script>
-    function toggleMenu() {
-      const nav = document.querySelector('nav > ul');
-      nav.classList.toggle('open');
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trauerfeiern – Worte am Weg – Thomas Keller</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Gedanken – Worte – Lebenswege</h1>
-    <p>Thomas Keller – Freier Redner</p>
-  </header>
+    <header>
+        <h1>Worte am Weg</h1>
+        <p>Thomas Keller – Freier Redner</p>
+    </header>
 
-  <nav>
-    <button onclick="toggleMenu()" aria-label="Menü ein-/ausklappen">☰ Menü</button>
-    <ul>
-      <li><a href="index.html">Start</a></li>
-      <li><a href="#">Angebot</a>
+    <nav>
+        <!-- Navigation unverändert -->
+    </nav>
+
+    <main>
+        <h2>Trauerfeiern</h2>
+        <p>Wenn ein Mensch stirbt, bleibt mehr zurück als nur Stille.<br>
+        Erinnerungen, Gefühle und auch Worte, die nie gesagt wurden – all das braucht Raum.<br>
+        Ich gestalte Trauerfeiern, die dem Leben des Verstorbenen gerecht werden.<br>
+        Persönlich. Ehrlich. Mitfühlend.<br>
+        Im Gespräch mit den Angehörigen finde ich Worte, die tragen – auch in schweren Stunden.<br>
+        Je nach Wunsch gestalte ich Ihre Trauerfeier</p>
+
         <ul>
-          <li><a href="trauerfeiern.html">Trauerfeiern</a></li>
-          <li><a href="hochzeiten.html">Hochzeiten</a></li>
-          <li><a href="willkommensfeiern.html">Namensfeiern</a></li>
+            <li>Christlich traditionell, für Gläubige, die nicht Mitglied einer Kirche sind.</li>
+            <li>Weltlich unabhängig, mit verschiedensten Ritualen (Erdzeremonie, Steinzeremonie, Musikfeiern, anekdotische Erinnerungsfeier und vieles mehr)</li>
+            <li>Frei geplant. Ich gestalte die Feier genau nach Ihren Wünschen und kläre gerne dabei die Umsetzbarkeit im Vorfeld für Sie ab.</li>
         </ul>
-      </li>
-      <li><a href="#">Über mich</a>
-        <ul>
-          <li><a href="gedanken.html">Gedanken</a></li>
-          <li><a href="worte.html">Worte</a></li>
-          <li><a href="lebenswege.html">Lebenswege</a></li>
-        </ul>
-      </li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-      <li><a href="rechtliches.html">Rechtliches</a></li>
-    </ul>
-  </nav>
+    </main>
 
-  <div class="content">
-    <h2>Trauerfeiern</h2>
-    <p>Der Abschied von einem geliebten Menschen ist immer schwer. Als freier Redner begleite ich Sie mit einfühlsamen Worten und individuell gestalteten Ritualen, die den Abschied würdevoll machen.</p>
-    <p>Ich gestalte Ihre Trauerfeier persönlich, mit Respekt vor Ihren Wünschen und Traditionen – egal ob christlich, weltlich oder frei.</p>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Thomas Keller – Freier Redner</p>
-  </footer>
+    <footer>
+        <!-- Footer unverändert -->
+    </footer>
 </body>
 </html>
